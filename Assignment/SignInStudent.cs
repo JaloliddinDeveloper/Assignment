@@ -39,7 +39,7 @@ namespace Assignment
                 db.SaveChanges();
 
                 MessageBox.Show("Student saved successfully!");
-                var nextForm = new LoginStudent(); 
+                var nextForm = new LoginStudent();
                 nextForm.Show();
                 this.Hide();
             }
@@ -47,6 +47,13 @@ namespace Assignment
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Main main = new Main();
+            main.Show();
+            this.Hide();
         }
     }
 }

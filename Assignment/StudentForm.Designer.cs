@@ -46,6 +46,7 @@
             comboBox1 = new ComboBox();
             button1 = new Button();
             button2 = new Button();
+            button7 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -205,11 +206,22 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // button7
+            // 
+            button7.Location = new Point(12, 583);
+            button7.Name = "button7";
+            button7.Size = new Size(115, 35);
+            button7.TabIndex = 39;
+            button7.Text = "Back";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
             // StudentForm
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1210, 630);
+            Controls.Add(button7);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(comboBox1);
@@ -257,5 +269,6 @@
         private ComboBox comboBox1;
         private Button button1;
         private Button button2;
+        private Button button7;
     }
 }

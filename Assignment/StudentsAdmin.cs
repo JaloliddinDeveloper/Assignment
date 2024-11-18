@@ -111,7 +111,7 @@ namespace Assignment
             }
         }
 
-      
+
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -208,6 +208,13 @@ namespace Assignment
             comboBox1.SelectedIndex = -1;
 
             textBox1.Focus();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Main main = new Main();
+            main.Show();
+            this.Hide();
         }
     }
 }

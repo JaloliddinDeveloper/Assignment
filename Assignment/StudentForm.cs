@@ -99,5 +99,12 @@ namespace Assignment
                 MessageBox.Show($"An error occurred while deleting the account: {ex.Message}");
             }
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Main main = new Main();
+            main.Show();
+            this.Hide();
+        }
     }
 }

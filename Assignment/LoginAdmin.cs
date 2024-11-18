@@ -25,6 +25,37 @@ namespace Assignment
                 string enteredEmail = textBox1.Text;
                 string enteredPassword = textBox2.Text;
 
+                // Hardcoded Admin credentials
+                string adminName = "Admin";
+                string adminPassword = "12345";
+
+                // Validate entered credentials
+                if (enteredEmail == adminName && enteredPassword == adminPassword)
+                {
+                    MessageBox.Show("Login successful!");
+                    var adminstudent = new StudentsAdmin();
+                    adminstudent.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid email or password. Please try again.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+
+        }
+    }
+}
+/*
+  try
+            {
+                string enteredEmail = textBox1.Text;
+                string enteredPassword = textBox2.Text;
+
                 var student = db.Admins.FirstOrDefault(s => s.Name == enteredEmail && s.Password == enteredPassword);
 
                 if (student != null)
@@ -43,6 +74,4 @@ namespace Assignment
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
-        }
-    }
-}
+ */
