@@ -34,28 +34,31 @@
             // 
             // button1
             // 
-            button1.Location = new Point(325, 12);
+            button1.BackColor = Color.FromArgb(192, 255, 255);
+            button1.Location = new Point(528, 120);
             button1.Name = "button1";
             button1.Size = new Size(143, 42);
             button1.TabIndex = 0;
             button1.Text = "Admin";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(325, 88);
+            button2.BackColor = Color.FromArgb(128, 255, 128);
+            button2.Location = new Point(528, 200);
             button2.Name = "button2";
             button2.Size = new Size(143, 51);
             button2.TabIndex = 1;
             button2.Text = "Student";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(128, 255, 255);
             ClientSize = new Size(1143, 630);
             Controls.Add(button2);
             Controls.Add(button1);

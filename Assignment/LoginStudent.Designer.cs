@@ -80,28 +80,31 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.Gray;
             button1.Location = new Point(12, 638);
             button1.Name = "button1";
             button1.Size = new Size(100, 40);
             button1.TabIndex = 10;
             button1.Text = "Back";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // button2
             // 
+            button2.BackColor = Color.Lime;
             button2.Location = new Point(390, 222);
             button2.Name = "button2";
             button2.Size = new Size(100, 40);
             button2.TabIndex = 11;
             button2.Text = "Log In";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // LoginStudent
             // 
             AutoScaleDimensions = new SizeF(12F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 255, 192);
             ClientSize = new Size(1370, 690);
             Controls.Add(button2);
             Controls.Add(button1);

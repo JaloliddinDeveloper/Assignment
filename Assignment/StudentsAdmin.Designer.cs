@@ -58,21 +58,23 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 24F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label1.Location = new Point(595, 9);
             label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(87, 23);
+            label1.Size = new Size(131, 36);
             label1.TabIndex = 0;
             label1.Text = "Welcome";
             // 
             // button1
             // 
+            button1.BackColor = Color.FromArgb(0, 192, 0);
             button1.Location = new Point(21, 58);
             button1.Name = "button1";
             button1.Size = new Size(115, 35);
             button1.TabIndex = 1;
             button1.Text = "AddStudent";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // dataGridView1
@@ -233,22 +235,24 @@
             // 
             // button4
             // 
+            button4.BackColor = Color.Cyan;
             button4.Location = new Point(123, 512);
             button4.Name = "button4";
             button4.Size = new Size(115, 35);
             button4.TabIndex = 35;
             button4.Text = "Update";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
             // button5
             // 
+            button5.BackColor = Color.FromArgb(255, 128, 128);
             button5.Location = new Point(256, 512);
             button5.Name = "button5";
             button5.Size = new Size(115, 35);
             button5.TabIndex = 36;
             button5.Text = "Delete";
-            button5.UseVisualStyleBackColor = true;
+            button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
             // button6
@@ -263,18 +267,20 @@
             // 
             // button7
             // 
+            button7.BackColor = Color.Silver;
             button7.Location = new Point(12, 643);
             button7.Name = "button7";
             button7.Size = new Size(115, 35);
             button7.TabIndex = 38;
             button7.Text = "Back";
-            button7.UseVisualStyleBackColor = true;
+            button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
             // StudentsAdmin
             // 
             AutoScaleDimensions = new SizeF(12F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 255, 192);
             ClientSize = new Size(1370, 690);
             Controls.Add(button7);
             Controls.Add(button6);
