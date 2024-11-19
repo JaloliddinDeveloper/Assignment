@@ -37,33 +37,38 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(513, 29);
+            label1.Font = new Font("Times New Roman", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label1.Location = new Point(480, 18);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(79, 21);
+            label1.Size = new Size(145, 40);
             label1.TabIndex = 0;
             label1.Text = "Welcome";
             // 
             // button1
             // 
+            button1.BackColor = Color.FromArgb(192, 255, 255);
+            button1.Font = new Font("Times New Roman", 18F);
             button1.Location = new Point(500, 88);
             button1.Margin = new Padding(4);
             button1.Name = "button1";
-            button1.Size = new Size(107, 32);
+            button1.Size = new Size(125, 48);
             button1.TabIndex = 1;
             button1.Text = "SignIn";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(500, 144);
+            button2.BackColor = Color.FromArgb(192, 192, 255);
+            button2.Font = new Font("Times New Roman", 18F);
+            button2.Location = new Point(500, 159);
             button2.Margin = new Padding(4);
             button2.Name = "button2";
-            button2.Size = new Size(107, 32);
+            button2.Size = new Size(125, 44);
             button2.TabIndex = 2;
             button2.Text = "Login";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // button3
@@ -80,6 +85,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 255, 192);
             ClientSize = new Size(1143, 630);
             Controls.Add(button3);
             Controls.Add(button2);

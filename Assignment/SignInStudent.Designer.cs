@@ -177,28 +177,31 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.Lime;
             button1.Location = new Point(133, 425);
             button1.Name = "button1";
             button1.Size = new Size(108, 35);
             button1.TabIndex = 15;
             button1.Text = "Insert";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // button2
             // 
+            button2.BackColor = Color.Gray;
             button2.Location = new Point(12, 643);
             button2.Name = "button2";
             button2.Size = new Size(108, 35);
             button2.TabIndex = 16;
             button2.Text = "Back";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // SignInStudent
             // 
             AutoScaleDimensions = new SizeF(12F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 255, 255);
             ClientSize = new Size(1370, 690);
             Controls.Add(button2);
             Controls.Add(button1);

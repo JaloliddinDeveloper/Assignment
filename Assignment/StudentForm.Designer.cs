@@ -188,38 +188,42 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.FromArgb(128, 128, 255);
             button1.Location = new Point(75, 436);
             button1.Name = "button1";
             button1.Size = new Size(87, 38);
             button1.TabIndex = 16;
             button1.Text = "Update";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // button2
             // 
+            button2.BackColor = Color.FromArgb(255, 128, 128);
             button2.Location = new Point(260, 436);
             button2.Name = "button2";
             button2.Size = new Size(98, 38);
             button2.TabIndex = 17;
             button2.Text = "Delete";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // button7
             // 
+            button7.BackColor = Color.Gray;
             button7.Location = new Point(12, 583);
             button7.Name = "button7";
             button7.Size = new Size(115, 35);
             button7.TabIndex = 39;
             button7.Text = "Back";
-            button7.UseVisualStyleBackColor = true;
+            button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
             // StudentForm
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 255, 255);
             ClientSize = new Size(1210, 630);
             Controls.Add(button7);
             Controls.Add(button2);
