@@ -10,5 +10,7 @@
         public string Password { get; set; }
         public Gender GenderType {get; set; }
         public Language Languages { get; set; }
+
+        public string StudentPicture {  get; set; } 
     }
 }
