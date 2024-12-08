@@ -34,8 +34,33 @@ namespace Assignment
             }
             comboBox1.DataSource = Enum.GetValues(typeof(Language));
             comboBox1.SelectedItem = _loggedInStudent.Languages;
-        }
 
+            LoadStudentPhoto();
+        }
+        private void LoadStudentPhoto()
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(_loggedInStudent.StudentPicture))
+                {
+                    string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Uploads", _loggedInStudent.StudentPicture);
+
+                    if (File.Exists(imagePath))
+                    {
+                        pictureBox1.ImageLocation = imagePath;
+                        pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Student photo not found.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading photo: {ex.Message}");
+            }
+        }
         private void StudentForm_Load(object sender, EventArgs e)
         {
 
@@ -105,6 +130,11 @@ namespace Assignment
             Main main = new Main();
             main.Show();
             this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -6,6 +6,7 @@ namespace Assignment
     {
         private readonly AppDbContext db;
         private int? selectedStudentId = null;
+        private string pictureFilePath;
 
         public StudentsAdmin()
         {
@@ -41,6 +42,7 @@ namespace Assignment
                 dataGridView1.Columns["Password"].Visible = false;
                 dataGridView1.Columns["GenderType"].HeaderText = "Gender";
                 dataGridView1.Columns["Languages"].HeaderText = "Language";
+                dataGridView1.Columns["StudentPicture"].Visible = false;
             }
             catch (Exception ex)
             {
@@ -76,10 +78,22 @@ namespace Assignment
                     }
 
                     comboBox1.SelectedItem = selectedStudent.Languages;
+                    pictureFilePath = selectedStudent.StudentPicture;
                 }
             }
         }
-
+        private void uploadPicture_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    pictureFilePath = ofd.FileName;
+                    MessageBox.Show("Picture uploaded successfully!");
+                }
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -94,7 +108,8 @@ namespace Assignment
                     Email = textBox4.Text,
                     Password = textBox5.Text,
                     GenderType = selectedGender,
-                    Languages = (Language)comboBox1.SelectedItem
+                    Languages = (Language)comboBox1.SelectedItem,
+                    StudentPicture = SaveStudentPicture()
                 };
 
                 db.Students.Add(student);
@@ -111,7 +126,20 @@ namespace Assignment
             }
         }
 
+        private string SaveStudentPicture()
+        {
+            if (string.IsNullOrEmpty(pictureFilePath))
+                return null;
 
+            string targetPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Uploads");
+            Directory.CreateDirectory(targetPath);
+
+            string uniqueFileName = $"{Guid.NewGuid()}{Path.GetExtension(pictureFilePath)}";
+            string destinationFile = Path.Combine(targetPath, uniqueFileName);
+
+            File.Copy(pictureFilePath, destinationFile, true);
+            return uniqueFileName;
+        }
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -216,5 +244,7 @@ namespace Assignment
             main.Show();
             this.Hide();
         }
+
+      
     }
 }

@@ -45,6 +45,8 @@
             label7 = new Label();
             button1 = new Button();
             button2 = new Button();
+            label8 = new Label();
+            uploadPicture = new Button();
             SuspendLayout();
             // 
             // label1
@@ -178,7 +180,7 @@
             // button1
             // 
             button1.BackColor = Color.Lime;
-            button1.Location = new Point(133, 425);
+            button1.Location = new Point(191, 479);
             button1.Name = "button1";
             button1.Size = new Size(108, 35);
             button1.TabIndex = 15;
@@ -197,12 +199,33 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(32, 426);
+            label8.Name = "label8";
+            label8.Size = new Size(133, 23);
+            label8.TabIndex = 17;
+            label8.Text = "StudentPicture";
+            // 
+            // uploadPicture
+            // 
+            uploadPicture.Location = new Point(171, 420);
+            uploadPicture.Name = "uploadPicture";
+            uploadPicture.Size = new Size(154, 35);
+            uploadPicture.TabIndex = 18;
+            uploadPicture.Text = "UploadPicture";
+            uploadPicture.UseVisualStyleBackColor = true;
+            uploadPicture.Click += uploadPicture_Click;
+            // 
             // SignInStudent
             // 
             AutoScaleDimensions = new SizeF(12F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 255);
             ClientSize = new Size(1370, 690);
+            Controls.Add(uploadPicture);
+            Controls.Add(label8);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label7);
@@ -248,5 +271,7 @@
         private Label label7;
         private Button button1;
         private Button button2;
+        private Label label8;
+        private Button uploadPicture;
     }
 }

@@ -8,7 +8,7 @@ namespace Assignment.Models
             Database.EnsureCreated();
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=StudentDBCore25;Trusted_Connection=True;MultipleActiveResultSets=true");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=StudentDB;Trusted_Connection=True;MultipleActiveResultSets=true");
        
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Student> Students { get; set; }

@@ -47,6 +47,8 @@
             button1 = new Button();
             button2 = new Button();
             button7 = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -219,12 +221,22 @@
             button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(429, 64);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(139, 172);
+            pictureBox1.TabIndex = 40;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // StudentForm
             // 
             AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 255);
             ClientSize = new Size(1210, 630);
+            Controls.Add(pictureBox1);
             Controls.Add(button7);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -249,6 +261,7 @@
             Name = "StudentForm";
             Text = "StudentForm";
             Load += StudentForm_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -274,5 +287,6 @@
         private Button button1;
         private Button button2;
         private Button button7;
+        private PictureBox pictureBox1;
     }
 }

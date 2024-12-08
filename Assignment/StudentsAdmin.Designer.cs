@@ -52,6 +52,8 @@
             button5 = new Button();
             button6 = new Button();
             button7 = new Button();
+            label9 = new Label();
+            uploadPicture = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -69,7 +71,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(0, 192, 0);
-            button1.Location = new Point(21, 58);
+            button1.Location = new Point(12, 13);
             button1.Name = "button1";
             button1.Size = new Size(115, 35);
             button1.TabIndex = 1;
@@ -236,7 +238,7 @@
             // button4
             // 
             button4.BackColor = Color.Cyan;
-            button4.Location = new Point(123, 512);
+            button4.Location = new Point(133, 13);
             button4.Name = "button4";
             button4.Size = new Size(115, 35);
             button4.TabIndex = 35;
@@ -247,7 +249,7 @@
             // button5
             // 
             button5.BackColor = Color.FromArgb(255, 128, 128);
-            button5.Location = new Point(256, 512);
+            button5.Location = new Point(256, 12);
             button5.Name = "button5";
             button5.Size = new Size(115, 35);
             button5.TabIndex = 36;
@@ -257,7 +259,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(173, 58);
+            button6.Location = new Point(386, 12);
             button6.Name = "button6";
             button6.Size = new Size(115, 35);
             button6.TabIndex = 37;
@@ -276,12 +278,33 @@
             button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(18, 493);
+            label9.Name = "label9";
+            label9.Size = new Size(133, 23);
+            label9.TabIndex = 39;
+            label9.Text = "StudentPicture";
+            // 
+            // uploadPicture
+            // 
+            uploadPicture.Location = new Point(172, 487);
+            uploadPicture.Name = "uploadPicture";
+            uploadPicture.Size = new Size(199, 34);
+            uploadPicture.TabIndex = 40;
+            uploadPicture.Text = "UploadPicture";
+            uploadPicture.UseVisualStyleBackColor = true;
+            uploadPicture.Click += uploadPicture_Click;
+            // 
             // StudentsAdmin
             // 
             AutoScaleDimensions = new SizeF(12F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
             ClientSize = new Size(1370, 690);
+            Controls.Add(uploadPicture);
+            Controls.Add(label9);
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(button5);
@@ -342,5 +365,7 @@
         private Button button5;
         private Button button6;
         private Button button7;
+        private Label label9;
+        private Button uploadPicture;
     }
 }
